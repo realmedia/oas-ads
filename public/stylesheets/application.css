@@ -1,0 +1,11 @@
+h1 {
+  font-size: 140%;
+  margin-bottom: 20px;
+}
+
+.leaderboard_728x90 {
+  width: 728px;
+  height: 90px;
+  border: solid 1px #efefef;
+  margin-bottom: 20px;
+}

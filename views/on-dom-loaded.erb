@@ -1,0 +1,27 @@
+<h1>Load ads once the page has been loaded</h1>
+
+<!-- Ad Container -->
+<div class="leaderboard_728x90" id="adTop"></div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    showAds();
+  });
+
+  var showAds = function() {
+    jQuery.each($('div[rel="ad"]'), function(idx, el) {    
+      var dest = document.getElementById("ad"+ jQuery(el).attr("pos"));
+      if (dest != null) {
+        dest.appendChild(el);
+        jQuery(el).css("display","inline");
+      };
+    });
+  };
+</script>
+<script type="text/javascript">
+  var OAS_sitepage = 'ML_BRASIL/TESTE';
+  var OAS_listpos  = 'Top';
+  var OAS_query = '';
+</script>
+<script type="text/javascript" src="http://static.realmediadigital.com/oas/7/mjx.js"></script>
+<div rel="ad" pos="Top" style="display:none"><script type="text/javascript">OAS_AD('Top')</script></div>
